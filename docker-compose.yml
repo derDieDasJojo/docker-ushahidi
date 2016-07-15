@@ -1,0 +1,12 @@
+platform:
+  image: quantumobject/docker-ushahidi-platform
+  ports:
+  - 8089:80
+
+web:
+  image: quantumobject/docker-ushahidi-platform-client
+  ports:
+  - 80:80 
+  environment:
+  - PLATFORM="http://172.17.8.101:8089" 
+
