@@ -28,3 +28,5 @@ client:
   - 80:80
   #volumes:
   #- /home/user/docker-ushahidi/platform-client/server/www:/usr/share/nginx/html
+  environment:
+  - BACKEND_URL=http://138.201.159.97:8080/v3
