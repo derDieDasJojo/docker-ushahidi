@@ -1,0 +1,5 @@
+formatter.name: dot
+suites:
+    ushahidi_suite:
+        namespace: Ushahidi
+        psr4_prefix: Ushahidi
