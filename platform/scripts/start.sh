@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd /var/www/html && ./bin/update
 # Disable Strict Host checking for non interactive git clones
 
 mkdir -p -m 0700 /root/.ssh
