@@ -108,7 +108,7 @@ RUN chmod 755 /usr/bin/pull && chmod 755 /usr/bin/push && chmod 755 /usr/bin/let
 
 # copy in code
 ADD src/ /var/www/html/
-
+RUN cd /var/www/html && ./bin/update --no-migrate
 EXPOSE 443 80
 
 #CMD ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
