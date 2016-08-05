@@ -21,25 +21,7 @@ platform:
   links:
   - db:db
 
-#client:
-  #image: nginx
-#  build: client
-#  ports: 
-#  - 8081:80
-  #volumes:
-  #- /home/user/docker-ushahidi/platform-client/server/www:/usr/share/nginx/html
-#  environment:
-#  - BACKEND_URL=http://138.201.159.97:8080/v3
-  #volumes_from:
-  #- client-build
-#  volumes:
-#  - ./www:/app/platform-client/server/www
-
-client-build:
-  build: dev
+client:
+  build: client
   ports: 
   - 80:80
-  #volumes:
-  #- ./server:/app/platform-client/server
-  #- /usr/share/nginx/html
-  #command: sleep 999999
