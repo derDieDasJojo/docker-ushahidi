@@ -1,5 +1,5 @@
 db:
-  image: mysql:5.6
+  image: staff0rd/mysql-minimal
   environment:
   - MYSQL_ROOT_PASSWORD=mysecretpassword
   - MYSQL_DATABASE=ushahidi
@@ -7,7 +7,8 @@ db:
   - MYSQL_PASSWORD=ushahidi-db-password
 
 platform:
-  build: platform
+  #build: platform
+  image: bennibu/ushahidi-platform
   ports:
   - 8080:80
   environment:
@@ -22,6 +23,7 @@ platform:
   - db:db
 
 client:
-  build: client
+  #build: client
+  image: bennibu/ushahidi-client
   ports: 
   - 80:80
